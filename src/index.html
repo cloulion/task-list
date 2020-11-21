@@ -27,7 +27,7 @@
                 <div>
                     <span>Task 1</span>
                     <i class="material-icons secondary-content">delete</i>
-                    <a href="#modal1" class="modal-trigger  secondary-content">
+                    <a href="#modal1" class="modal-trigger secondary-content">
                         <i class="material-icons">edit</i>
                     </a>
                 </div>
@@ -36,19 +36,42 @@
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <h4>Modal Header</h4>
+                <h4>Update Task</h4>
                 <p>A bunch of text</p>
             </div>
             <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Update</a>
             </div>
         </div>
     </div>
-    <script src="app.js">
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.modal');
             var instances = M.Modal.init(elems);
         });
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAy7_GrKngQ_eWFuXGPzE84dLQ0YUFcZJw",
+        authDomain: "task-list-3e3c0.firebaseapp.com",
+        databaseURL: "https://task-list-3e3c0.firebaseio.com",
+        projectId: "task-list-3e3c0",
+        storageBucket: "task-list-3e3c0.appspot.com",
+        messagingSenderId: "757511422582",
+        appId: "1:757511422582:web:b6b598abf757bed9079557"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    var db = firebase.firestore();
     </script>
 </body>
 </html>
