@@ -17,30 +17,21 @@
         </div>
     </nav>
     <div class="container">
-        <form action="add-task-form">
-            <input type="text" name="title" placeholder="Add a task..">
-            <a class="waves-effect waves-light btn">Add</a>
+        <form id="add-task-form">
+            <input type="text" name="title" placeholder="Add a task.." required>
+            <button class="waves-effect waves-light btn">Add</button>
         </form>
-        <ul class="collection with-header">
+        <ul class="collection with-header" id='task-list'>
             <li class="collection-header"><h4>Tasks</h4></li>
-            <li class="collection-item">
-                <div>
-                    <span>Task 1</span>
-                    <i class="material-icons secondary-content">delete</i>
-                    <a href="#modal1" class="modal-trigger secondary-content">
-                        <i class="material-icons">edit</i>
-                    </a>
-                </div>
-            </li>
         </ul>
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <h4>Update Task</h4>
-                <p>A bunch of text</p>
+                <input type="text" name="new-title" placeholder="Update task..">
             </div>
             <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Update</a>
+                <a href="#!" id="update-btn" class="modal-close waves-effect waves-green btn-flat">Update</a>
             </div>
         </div>
     </div>
@@ -52,7 +43,7 @@
     </script>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -73,5 +64,6 @@
 
     var db = firebase.firestore();
     </script>
+    <script src="app.js"></script>
 </body>
 </html>
